@@ -10,6 +10,13 @@
 
    public const PAJAK = 0.11;
 
+   public function __construct($kode,$nama,$harga,$stok) {
+    $this->$kode = $kode;
+    $this->$nama = $nama;
+    $thid->$harga = $harga;
+    $this->$stok = $stok;-
+   }
+
    public function pajak()
       return self::PAJAK * 100;
 }
@@ -25,7 +32,6 @@
 
   $pajak = produk::PAJAK * 100:
   $jumlahpajak = $produk->harga * produk::PAJAK;
-
 
 
  //hasil
