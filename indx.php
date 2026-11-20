@@ -5,16 +5,24 @@ require('./Propertyconstant.php');
 use Pbo\Marketplace\produk;
 
 // object
-$produk = new produk('P001', 'Laptop', 1000000, 5);
+$produk = new produk();
+
+$produk->setkode("p001")
+->setnama("Laptop")
+->setharga(1000000)
+->setstok(5);
 
 // output
-echo "produk: " . $produk->nama;
+echo "produk: ".$produk->getNama();
 echo "<br/>";
 
-echo "harga: " . $produk->harga;
+echo "harga: ".$produk->getHarga();
 echo "<br/>";
 
-echo "pajak: " . $produk->pajak() . "%";
+echo "stok: ".$produk->getStok();
+echo "<br/>";
+
+echo "pajak: ".$produk->pajak() . "%";
 echo "<br/>";
 
 echo "total harga setelah pajak: Rp." . $produk->total();
